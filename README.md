@@ -52,13 +52,14 @@ public void Put(long id, Side side, byte[] data)
 
 
 Enum 
+
 public enum DiffResultType
 {
     Equals,
     SizeDoNotMatch,
     ContentDoNotMatch
 }
-a
+
 public enum Side
 {
     Left,
@@ -66,6 +67,7 @@ public enum Side
 }
 
 Model resources, and collections
+
 public class CompareData
 {
     public byte[]? Left { get; set; }
@@ -82,6 +84,7 @@ public class Difference
     public long Offset { get; set; }
     public long Length { get; set; }
 }
+
 public class DiffResult
 {
     public DiffResultType DiffResultType { get; set; }
@@ -90,6 +93,7 @@ public class DiffResult
 
 Basic API controllers and routing
 API controllers in ASP.NET Core inherit from the Controller class and use attributes to define routes. The common pattern is naming the controller <RouteName>Controller, and using the /[controller] attribute value, which automatically names the route based on the controller name:
+
 
 [HttpGet]
 [Route("{id:long}")]
