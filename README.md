@@ -51,11 +51,9 @@ public void Put(long id, Side side, byte[] data)
 }
 
 
+Enum
 
 
-
-
--	Enum 
 public enum DiffResultType
 {
     Equals,
@@ -68,6 +66,7 @@ public enum Side
     Left,
     Right
 }
+
 Model resources, and collections
 public class CompareData
 {
