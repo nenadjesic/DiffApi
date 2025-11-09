@@ -18,8 +18,11 @@ Testing it out
 5.	Use an HTTP client like Postman or Fiddler to GET http://localhost:5130.
 
 Techniques for building RESTful APIs
+
 ConcurrentDictionary
+
 -	The AddOrUpdate  function
+  
 The ConcurrentDictionary is a dictionary that allows you to add, fetch and remove items in a thread-safe way. If you're going to be accessing a dictionary from multiple threads, then it should be your go-to class.
 The vast majority of methods it exposes are thread safe, with the notable exception of one of the AddOrUpdate overloads:
 
