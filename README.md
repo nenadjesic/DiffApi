@@ -8,7 +8,7 @@ JSON containing base64 encoded binary data on both endpoints.
 1.	If equal return that 
 2.	oIf not of equal size just return that 
 3.	If of same size provide insight in where the diff are, actual diffs are not needed. 
-So mainly offsets + length in the data 
+     So mainly offsets + length in the data 
 
 Testing it out
 1.	Clone this repository
@@ -22,6 +22,7 @@ ConcurrentDictionary
 -	The AddOrUpdate  function
 The ConcurrentDictionary is a dictionary that allows you to add, fetch and remove items in a thread-safe way. If you're going to be accessing a dictionary from multiple threads, then it should be your go-to class.
 The vast majority of methods it exposes are thread safe, with the notable exception of one of the AddOrUpdate overloads:
+
 
 public CompareData? Get(long id)
 {
