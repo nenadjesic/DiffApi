@@ -1,0 +1,29 @@
+@DiffApi_HostAddress = http://localhost:5130/v1/diff
+
+GET {{DiffApi_HostAddress}}/1
+Accept: application/json
+
+###
+
+PUT {{DiffApi_HostAddress}}/1/left
+Content-type: application/json
+
+{
+  "data": "AAAAAA=="
+}
+
+###
+
+PUT {{DiffApi_HostAddress}}/1/right
+Content-type: application/json
+
+{
+  "data": "AQABAQ=="
+}
+
+###
+
+GET {{DiffApi_HostAddress}}/1
+Accept: application/json
+
+###
