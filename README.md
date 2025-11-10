@@ -49,6 +49,8 @@ The vast majority of methods it exposes are thread safe, with the notable except
                 return existing;
             });
     }
+
+    
   public List<Difference> GetDifferences(byte[] left, byte[] right)
   {
       _logger.LogInformation("Calculating differences between {Left} and {Right}", left, right);
