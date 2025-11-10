@@ -23,6 +23,8 @@ The AddOrUpdate  function
 The ConcurrentDictionary is a dictionary that allows you to add, fetch and remove items in a thread-safe way. If you're going to be accessing a dictionary from multiple threads, then it should be your go-to class.
 The vast majority of methods it exposes are thread safe, with the notable exception of one of the AddOrUpdate overloads:
 
+Functions Get, Put and Services function for calculate what is diff GetDifferences
+
     public CompareData? Get(long id)
     {
         Comparisons.TryGetValue(id, out var compareData);
@@ -51,8 +53,8 @@ The vast majority of methods it exposes are thread safe, with the notable except
     }
 
     
-  public List<Difference> GetDifferences(byte[] left, byte[] right)
-  {
+    public List<Difference> GetDifferences(byte[] left, byte[] right)
+    {
       _logger.LogInformation("Calculating differences between {Left} and {Right}", left, right);
 
       var differences = new List<Difference>();
